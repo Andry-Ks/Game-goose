@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/setup-python@v2.3.0
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2.3.0
@@ -24,3 +24,17 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
+          # Ваші команди для задеплоювання гри
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Upgrade PIP
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Install Node.js dependencies
+        run: |
+          
